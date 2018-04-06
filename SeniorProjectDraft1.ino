@@ -53,7 +53,7 @@ void setup() {
   display.println("Sen. Proj. 2018");
   display.display();
   while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+     // wait for serial port to connect. Needed for native USB port only
   }
   Serial.print("Initializing SD card...");
   if (!SD.begin(4)) {
@@ -96,9 +96,11 @@ void loop() {
   else {
     Serial.println("error opening datalog.txt");
   }
+    Serial.println(declaration);
+    Serial.println(dataString);
+    Serial.println(seperator);
 
   // Serial.print(analogRead(NETFORCE), "/n/n");
   // Serial.print(analogRead(NEGFORCE), "/n/n");
   // Serial.println(analogRead(POSFORCE));
-
 }
